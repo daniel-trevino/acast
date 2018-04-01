@@ -1,0 +1,660 @@
+@mixin container {
+  padding: 0 4%;
+  width: 100%;
+  max-width: none;
+  @include mq($from: md) {
+    padding: 0 6%;
+  }
+  @include mq($from: lg) {
+    padding: 0 8%;
+  }
+  @include mq($from: xl) {
+    padding: 0 10%;
+  }
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//Background image
+@mixin background-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+//Position
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == "vertical" {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } @else if $position == "horizontal" {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  } @else if $position == "both" {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+//Padding
+@mixin padding-xs {
+  padding: 1em;
+}
+
+@mixin padding-sm {
+  padding: 2em;
+  @include mq($until: sm) {
+    padding: 1.5em;
+  }
+}
+
+@mixin padding-md {
+  padding: 3em;
+  @include mq($until: sm) {
+    padding: 2.5em;
+  }
+}
+
+@mixin padding-lg {
+  padding: 4em;
+  @include mq($until: sm) {
+    padding: 3.5em;
+  }
+}
+
+@mixin padding-xl {
+  padding: 5em;
+  @include mq($until: sm) {
+    padding: 4.5em;
+  }
+}
+
+@mixin padding-xxl {
+  padding: 7em;
+  @include mq($until: sm) {
+    padding: 6.5em;
+  }
+}
+
+//Padding Y Axel
+@mixin padding-y-xs {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+@mixin padding-y-sm {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  @include mq($until: sm) {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+}
+
+@mixin padding-y-md {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  @include mq($until: sm) {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+  }
+}
+
+@mixin padding-y-lg {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  @include mq($until: sm) {
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
+  }
+}
+
+@mixin padding-y-xl {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  @include mq($until: sm) {
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+  }
+}
+
+@mixin padding-y-xxl {
+  padding-top: 7em;
+  padding-bottom: 7em;
+  @include mq($until: sm) {
+    padding-top: 6.5em;
+    padding-bottom: 6.5em;
+  }
+}
+
+//Padding X Axel
+@mixin padding-x-xs {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+@mixin padding-x-sm {
+  padding-right: 2em;
+  padding-left: 2em;
+  @include mq($until: sm) {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+}
+
+@mixin padding-x-md {
+  padding-right: 3em;
+  padding-left: 3em;
+  @include mq($until: sm) {
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+  }
+}
+
+@mixin padding-x-lg {
+  padding-right: 4em;
+  padding-left: 4em;
+  @include mq($until: sm) {
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+  }
+}
+
+@mixin padding-x-xl {
+  padding-right: 5em;
+  padding-left: 5em;
+  @include mq($until: sm) {
+    padding-right: 4.5em;
+    padding-left: 4.5em;
+  }
+}
+
+@mixin padding-x-xxl {
+  padding-right: 7em;
+  padding-left: 7em;
+  @include mq($until: sm) {
+    padding-right: 6.5em;
+    padding-left: 6.5em;
+  }
+}
+
+//Padding top
+@mixin padding-t-xs {
+  padding-top: 1em;
+}
+
+@mixin padding-t-sm {
+  padding-top: 2em;
+  @include mq($until: sm) {
+    padding-top: 1.5em;
+  }
+}
+
+@mixin padding-t-md {
+  padding-top: 3em;
+  @include mq($until: sm) {
+    padding-top: 2.5em;
+  }
+}
+
+@mixin padding-t-lg {
+  padding-top: 4em;
+  @include mq($until: sm) {
+    padding-top: 3.5em;
+  }
+}
+
+@mixin padding-t-xl {
+  padding-top: 5em;
+  @include mq($until: sm) {
+    padding-top: 4.5em;
+  }
+}
+
+@mixin padding-t-xxl {
+  padding-top: 7em;
+  @include mq($until: sm) {
+    padding-top: 6.5em;
+  }
+}
+
+//Padding bottom
+@mixin padding-b-xs {
+  padding-bottom: 1em;
+}
+
+@mixin padding-b-sm {
+  padding-bottom: 2em;
+  @include mq($until: sm) {
+    padding-bottom: 1.5em;
+  }
+}
+
+@mixin padding-b-md {
+  padding-bottom: 3em;
+  @include mq($until: sm) {
+    padding-bottom: 2.5em;
+  }
+}
+
+@mixin padding-b-lg {
+  padding-bottom: 4em;
+  @include mq($until: sm) {
+    padding-bottom: 3.5em;
+  }
+}
+
+@mixin padding-b-xl {
+  padding-bottom: 5em;
+  @include mq($until: sm) {
+    padding-bottom: 4.5em;
+  }
+}
+
+@mixin padding-b-xxl {
+  padding-bottom: 7em;
+  @include mq($until: sm) {
+    padding-bottom: 6.5em;
+  }
+}
+
+//Padding left
+@mixin padding-l-xs {
+  padding-left: 1em;
+}
+
+@mixin padding-l-sm {
+  padding-left: 2em;
+  @include mq($until: sm) {
+    padding-left: 1.5em;
+  }
+}
+
+@mixin padding-l-md {
+  padding-left: 3em;
+  @include mq($until: sm) {
+    padding-left: 2.5em;
+  }
+}
+
+@mixin padding-l-lg {
+  padding-left: 4em;
+  @include mq($until: sm) {
+    padding-left: 3.5em;
+  }
+}
+
+@mixin padding-l-xl {
+  padding-left: 5em;
+  @include mq($until: sm) {
+    padding-left: 4.5em;
+  }
+}
+
+@mixin padding-l-xxl {
+  padding-left: 7em;
+  @include mq($until: sm) {
+    padding-left: 6.5em;
+  }
+}
+
+//Padding right
+@mixin padding-r-xs {
+  padding-right: 1em;
+}
+
+@mixin padding-r-sm {
+  padding-right: 2em;
+  @include mq($until: sm) {
+    padding-right: 1.5em;
+  }
+}
+
+@mixin padding-r-md {
+  padding-right: 3em;
+  @include mq($until: sm) {
+    padding-right: 2.5em;
+  }
+}
+
+@mixin padding-r-lg {
+  padding-right: 4em;
+  @include mq($until: sm) {
+    padding-right: 3.5em;
+  }
+}
+
+@mixin padding-r-xl {
+  padding-right: 5em;
+  @include mq($until: sm) {
+    padding-right: 4.5em;
+  }
+}
+
+@mixin padding-r-xxl {
+  padding-right: 7em;
+  @include mq($until: sm) {
+    padding-right: 6.5em;
+  }
+}
+
+//Margin
+@mixin margin-xs {
+  margin: 1em;
+}
+
+@mixin margin-sm {
+  margin: 2em;
+  @include mq($until: sm) {
+    margin: 1.5em;
+  }
+}
+
+@mixin margin-md {
+  margin: 3em;
+  @include mq($until: sm) {
+    margin: 2.5em;
+  }
+}
+
+@mixin margin-lg {
+  margin: 4em;
+  @include mq($until: sm) {
+    margin: 3.5em;
+  }
+}
+
+@mixin margin-xl {
+  margin: 5em;
+  @include mq($until: sm) {
+    margin: 4.5em;
+  }
+}
+
+@mixin margin-xxl {
+  margin: 7em;
+  @include mq($until: sm) {
+    margin: 6.5em;
+  }
+}
+
+//Margin Y Axel
+@mixin margin-y-xs {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@mixin margin-y-sm {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  @include mq($until: sm) {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+}
+
+@mixin margin-y-md {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  @include mq($until: sm) {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+  }
+}
+
+@mixin margin-y-lg {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  @include mq($until: sm) {
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+  }
+}
+
+@mixin margin-y-xl {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  @include mq($until: sm) {
+    margin-top: 4.5em;
+    margin-bottom: 4.5em;
+  }
+}
+
+@mixin margin-y-xxl {
+  margin-top: 7em;
+  margin-bottom: 7em;
+  @include mq($until: sm) {
+    margin-top: 6.5em;
+    margin-bottom: 6.5em;
+  }
+}
+
+//Margin X Axel
+@mixin margin-x-xs {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+@mixin margin-x-sm {
+  margin-right: 2em;
+  margin-left: 2em;
+  @include mq($until: sm) {
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+  }
+}
+
+@mixin margin-x-md {
+  margin-right: 3em;
+  margin-left: 3em;
+  @include mq($until: sm) {
+    margin-right: 2.5em;
+    margin-left: 2.5em;
+  }
+}
+
+@mixin margin-x-lg {
+  margin-right: 4em;
+  margin-left: 4em;
+  @include mq($until: sm) {
+    margin-right: 3.5em;
+    margin-left: 3.5em;
+  }
+}
+
+@mixin margin-x-xl {
+  margin-right: 5em;
+  margin-left: 5em;
+  @include mq($until: sm) {
+    margin-right: 4.5em;
+    margin-left: 4.5em;
+  }
+}
+
+@mixin margin-x-xxl {
+  margin-right: 7em;
+  margin-left: 7em;
+  @include mq($until: sm) {
+    margin-right: 6.5em;
+    margin-left: 6.5em;
+  }
+}
+
+//Margin top
+@mixin margin-t-xs {
+  margin-top: 1em;
+}
+
+@mixin margin-t-sm {
+  margin-top: 2em;
+  @include mq($until: sm) {
+    margin-top: 1.5em;
+  }
+}
+
+@mixin margin-t-md {
+  margin-top: 3em;
+  @include mq($until: sm) {
+    margin-top: 2.5em;
+  }
+}
+
+@mixin margin-t-lg {
+  margin-top: 4em;
+  @include mq($until: sm) {
+    margin-top: 3.5em;
+  }
+}
+
+@mixin margin-t-xl {
+  margin-top: 5em;
+  @include mq($until: sm) {
+    margin-top: 4.5em;
+  }
+}
+
+@mixin margin-t-xxl {
+  margin-top: 7em;
+  @include mq($until: sm) {
+    margin-top: 6.5em;
+  }
+}
+
+//Margin bottom
+@mixin margin-b-xs {
+  margin-bottom: 1em;
+}
+
+@mixin margin-b-sm {
+  margin-bottom: 2em;
+  @include mq($until: sm) {
+    margin-bottom: 1.5em;
+  }
+}
+
+@mixin margin-b-md {
+  margin-bottom: 3em;
+  @include mq($until: sm) {
+    margin-bottom: 2.5em;
+  }
+}
+
+@mixin margin-b-lg {
+  margin-bottom: 4em;
+  @include mq($until: sm) {
+    margin-bottom: 3.5em;
+  }
+}
+
+@mixin margin-b-xl {
+  margin-bottom: 5em;
+  @include mq($until: sm) {
+    margin-bottom: 4.5em;
+  }
+}
+
+@mixin margin-b-xxl {
+  margin-bottom: 7em;
+  @include mq($until: sm) {
+    margin-bottom: 6.5em;
+  }
+}
+
+//Margin left
+@mixin margin-l-xs {
+  margin-left: 1em;
+}
+
+@mixin margin-l-sm {
+  margin-left: 2em;
+  @include mq($until: sm) {
+    margin-left: 1.5em;
+  }
+}
+
+@mixin margin-l-md {
+  margin-left: 3em;
+  @include mq($until: sm) {
+    margin-left: 2.5em;
+  }
+}
+
+@mixin margin-l-lg {
+  margin-left: 4em;
+  @include mq($until: sm) {
+    margin-left: 3.5em;
+  }
+}
+
+@mixin margin-l-xl {
+  margin-left: 5em;
+  @include mq($until: sm) {
+    margin-left: 4.5em;
+  }
+}
+
+@mixin margin-l-xxl {
+  margin-left: 7em;
+  @include mq($until: sm) {
+    margin-left: 6.5em;
+  }
+}
+
+//Margin right
+@mixin margin-r-xs {
+  margin-right: 1em;
+}
+
+@mixin margin-r-sm {
+  margin-right: 2em;
+  @include mq($until: sm) {
+    margin-right: 1.5em;
+  }
+}
+
+@mixin margin-r-md {
+  margin-right: 3em;
+  @include mq($until: sm) {
+    margin-right: 2.5em;
+  }
+}
+
+@mixin margin-r-lg {
+  margin-right: 4em;
+  @include mq($until: sm) {
+    margin-right: 3.5em;
+  }
+}
+
+@mixin margin-r-xl {
+  margin-right: 5em;
+  @include mq($until: sm) {
+    margin-right: 4.5em;
+  }
+}
+
+@mixin margin-r-xxl {
+  margin-right: 7em;
+  @include mq($until: sm) {
+    margin-right: 6.5em;
+  }
+}

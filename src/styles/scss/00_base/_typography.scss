@@ -1,0 +1,140 @@
+@include typi-init;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons"); // https://material.io/icons/
+
+h1.textHeadingOne {
+  @include typi("h1");
+  @include ff("heading");
+  font-weight: bold;
+}
+
+h2.textHeadingTwo {
+  @include typi("h2");
+  @include ff("heading");
+  font-weight: bold;
+}
+
+h3.textHeadingThree {
+  @include typi("h3");
+  @include ff("heading");
+  font-weight: bold;
+}
+
+h4.textHeadingFour {
+  @include typi("h4");
+  @include ff("heading");
+  font-weight: bold;
+}
+
+h1.textHeadingMega,
+h2.textHeadingMega,
+h3.textHeadingMega,
+h4.textHeadingMega {
+  @include typi("mega");
+  @include ff("heading");
+  font-weight: bold;
+}
+
+h1.textHeadingJumbo,
+h2.textHeadingJumbo,
+h3.textHeadingJumbo,
+h4.textHeadingJumbo {
+  @include typi("jumbo");
+  @include ff("heading");
+  font-weight: bold;
+}
+
+p.textParagraph,
+blockquote.textBlockquote,
+.textAnchor {
+  @include typi("body");
+  @include ff("body");
+  font-weight: normal;
+  color: $color-gray3;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.textCode {
+  @include typi("small");
+  @include ff("code");
+  color: $color-black;
+}
+
+.textLight {
+  font-weight: 400;
+}
+
+// Global style changes
+li,
+ol,
+ul {
+  @include typi("body");
+  @include ff("body");
+  font-weight: normal;
+  font-weight: 400;
+}
+
+//remove default styling, remove bullets
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+//List without bullets, use inside articles etc.
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list__item {
+  margin-bottom: 10px;
+}
+
+//List with bullets, use inside articles etc.
+.bulletList {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+
+  i {
+    font-style: normal;
+  }
+}

@@ -1,0 +1,19 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f6fa;
+  padding: 0 4%;
+  width: 100%;
+  max-width: none;
+
+  h1 {
+    @include typi("mega");
+  }
+
+  p {
+    @include typi("h2");
+  }
+}

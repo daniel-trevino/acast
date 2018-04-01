@@ -1,0 +1,510 @@
+// Floats
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.float-none {
+  float: none;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+// Text
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+// Colors
+.color-primary {
+  color: $color-primary;
+}
+.color-secondary {
+  color: $color-secondary;
+}
+.color-accent1 {
+  color: $color-accent1;
+}
+.color-accent2 {
+  color: $color-accent2;
+}
+.color-accent3 {
+  color: $color-accent3;
+}
+
+.color-gray1 {
+  color: $color-gray1;
+}
+.color-gray2 {
+  color: $color-gray2;
+}
+.color-black {
+  color: $color-black;
+}
+.color-white {
+  color: $color-white;
+}
+.color-success {
+  color: $color-success;
+}
+.color-error {
+  color: $color-error;
+}
+.color-warning {
+  color: $color-warning;
+}
+
+// Colors
+.bg-primary {
+  background-color: $color-primary;
+}
+.bg-secondary {
+  background-color: $color-secondary;
+}
+.bg-accent1 {
+  background-color: $color-accent1;
+}
+.bg-accent2 {
+  background-color: $color-accent2;
+}
+.bg-accent3 {
+  background-color: $color-accent3;
+}
+
+.bg-gray1 {
+  background-color: $color-gray1;
+}
+.bg-gray2 {
+  background-color: $color-gray2;
+}
+.bg-black {
+  background-color: $color-black;
+}
+.bg-white {
+  background-color: $color-white;
+}
+.bg-success {
+  background-color: $color-success;
+}
+.bg-error {
+  background-color: $color-error;
+}
+.bg-warning {
+  background-color: $color-warning;
+}
+
+// Display
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+.hide {
+  display: none;
+}
+.full-width {
+  width: 100%;
+}
+.middle {
+  vertical-align: middle;
+}
+
+// Radius and borders
+.radius-3 {
+  border-radius: 3px;
+}
+.radius-5 {
+  border-radius: 5px;
+}
+.radius-10 {
+  border-radius: 10px;
+}
+.radius-15 {
+  border-radius: 15px;
+}
+.radius-big {
+  border-radius: $big-border-radius;
+}
+.no-border {
+  border: none;
+}
+
+//Padding
+.padding-xs {
+  @include padding-xs;
+}
+
+.padding-sm {
+  @include padding-sm;
+}
+
+.padding-md {
+  @include padding-md;
+}
+
+.padding-lg {
+  @include padding-lg;
+}
+
+.padding-xl {
+  @include padding-xl;
+}
+
+.padding-xxl {
+  @include padding-xxl;
+}
+
+//Padding Y Axel
+.padding-y-xs {
+  @include padding-y-xs;
+}
+
+.padding-y-sm {
+  @include padding-y-sm;
+}
+
+.padding-y-md {
+  @include padding-y-md;
+}
+
+.padding-y-lg {
+  @include padding-y-lg;
+}
+
+.padding-y-xl {
+  @include padding-y-xl;
+}
+
+.padding-y-xxl {
+  @include padding-y-xxl;
+}
+
+//Padding X Axel
+.padding-x-xs {
+  @include padding-x-xs;
+}
+
+.padding-x-sm {
+  @include padding-x-sm;
+}
+
+.padding-x-md {
+  @include padding-x-md;
+}
+
+.padding-x-lg {
+  @include padding-x-lg;
+}
+
+.padding-x-xl {
+  @include padding-x-xl;
+}
+
+.padding-x-xxl {
+  @include padding-x-xxl;
+}
+
+//Padding top
+.padding-t-xs {
+  @include padding-t-xs;
+}
+
+.padding-t-sm {
+  @include padding-t-sm;
+}
+
+.padding-t-md {
+  @include padding-t-md;
+}
+
+.padding-t-lg {
+  @include padding-t-lg;
+}
+
+.padding-t-xl {
+  @include padding-t-xl;
+}
+
+.padding-t-xxl {
+  @include padding-t-xxl;
+}
+
+//Padding bottom
+.padding-b-xs {
+  @include padding-b-xs;
+}
+
+.padding-b-sm {
+  @include padding-b-sm;
+}
+
+.padding-b-md {
+  @include padding-b-md;
+}
+
+.padding-b-lg {
+  @include padding-b-lg;
+}
+
+.padding-b-xl {
+  @include padding-b-xl;
+}
+
+.padding-b-xxl {
+  @include padding-b-xxl;
+}
+
+//Padding left
+.padding-l-xs {
+  @include padding-l-xs;
+}
+
+.padding-l-sm {
+  @include padding-l-sm;
+}
+
+.padding-l-md {
+  @include padding-l-md;
+}
+
+.padding-l-lg {
+  @include padding-l-lg;
+}
+
+.padding-l-xl {
+  @include padding-l-xl;
+}
+
+.padding-l-xxl {
+  @include padding-l-xxl;
+}
+
+//Padding right
+.padding-r-xs {
+  @include padding-r-xs;
+}
+
+.padding-r-sm {
+  @include padding-r-sm;
+}
+
+.padding-r-md {
+  @include padding-r-md;
+}
+
+.padding-r-lg {
+  @include padding-r-lg;
+}
+
+.padding-r-xl {
+  @include padding-r-xl;
+}
+
+.padding-r-xxl {
+  @include padding-r-xxl;
+}
+
+//Margin
+.margin-xs {
+  @include margin-xs;
+}
+
+.margin-sm {
+  @include margin-sm;
+}
+
+.margin-md {
+  @include margin-md;
+}
+
+.margin-lg {
+  @include margin-lg;
+}
+
+.margin-xl {
+  @include margin-xl;
+}
+
+.margin-xxl {
+  @include margin-xxl;
+}
+
+//Margin Y Axel
+.margin-y-xs {
+  @include margin-y-xs;
+}
+
+.margin-y-sm {
+  @include margin-y-sm;
+}
+
+.margin-y-md {
+  @include margin-y-md;
+}
+
+.margin-y-lg {
+  @include margin-y-lg;
+}
+
+.margin-y-xl {
+  @include margin-y-xl;
+}
+
+.margin-y-xxl {
+  @include margin-y-xxl;
+}
+
+//Margin X Axel
+.margin-x-xs {
+  @include margin-x-xs;
+}
+
+.margin-x-sm {
+  @include margin-x-sm;
+}
+
+.margin-x-md {
+  @include margin-x-md;
+}
+
+.margin-x-lg {
+  @include margin-x-lg;
+}
+
+.margin-x-xl {
+  @include margin-x-xl;
+}
+
+.margin-x-xxl {
+  @include margin-b-xxl;
+}
+
+//Margin top
+.margin-t-xs {
+  @include margin-t-xs;
+}
+
+.margin-t-sm {
+  @include margin-t-sm;
+}
+
+.margin-t-md {
+  @include margin-t-md;
+}
+
+.margin-t-lg {
+  @include margin-t-lg;
+}
+
+.margin-t-xl {
+  @include margin-t-xl;
+}
+
+.margin-t-xxl {
+  @include margin-t-xxl;
+}
+
+//Margin bottom
+.margin-b-xs {
+  @include margin-b-xs;
+}
+
+.margin-b-sm {
+  @include margin-b-sm;
+}
+
+.margin-b-md {
+  @include margin-b-md;
+}
+
+.margin-b-lg {
+  @include margin-b-lg;
+}
+
+.margin-b-xl {
+  @include margin-b-xl;
+}
+
+.margin-b-xxl {
+  @include margin-b-xxl;
+}
+
+//Margin left
+.margin-l-xs {
+  @include margin-l-xs;
+}
+
+.margin-l-sm {
+  @include margin-l-sm;
+}
+
+.margin-l-md {
+  @include margin-l-md;
+}
+
+.margin-l-lg {
+  @include margin-l-lg;
+}
+
+.margin-l-xl {
+  @include margin-l-xl;
+}
+
+.margin-l-xxl {
+  @include margin-l-xxl;
+}
+
+//Margin right
+.margin-r-xs {
+  @include margin-r-xs;
+}
+
+.margin-r-sm {
+  @include margin-r-sm;
+}
+
+.margin-r-md {
+  @include margin-r-md;
+}
+
+.margin-r-lg {
+  @include margin-r-lg;
+}
+
+.margin-r-xl {
+  @include margin-r-xl;
+}
+
+.margin-r-xxl {
+  @include margin-r-xxl;
+}
