@@ -5,7 +5,7 @@
     "RUN mkdir -p /src/app",
     "WORKDIR /src/app",
     "ENV REACT_APP_HOST_ENV production",
-    "ENV REACT_APP_DEV_API_URL https://acastserver.tredan.se"
+    "ENV REACT_APP_DEV_API_URL https://acastserver.tredan.se",
     "COPY ./src/package.json /src/app/",
     "RUN npm install && npm install -g pushstate-server",
     "COPY ./src /src/app",
