@@ -1,0 +1,40 @@
+.player {
+  width: 100%;
+  max-width: 100%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: $color-secondary;
+
+  @include padding-y-xs;
+}
+
+.player__replayIcon,
+.player__playIcon,
+.player__forwardIcon {
+  display: flex;
+  align-items: center;
+  @include margin-r-xs;
+}
+
+.player__timeline {
+  @include mq($until: md) {
+    margin-top: 1.2em;
+  }
+
+  :nth-child(1) {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+.player__duration {
+  color: $color-white;
+
+  @include mq($until: md) {
+    @include padding-t-xs;
+  }
+
+  p {
+    margin: 0;
+  }
+}

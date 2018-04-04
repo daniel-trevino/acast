@@ -5,8 +5,8 @@ import LoadingScreen from "../components/organisms/LoadingScreen";
 
 const Loading = () => <LoadingScreen />;
 
-const App = Loadable({
-  loader: () => import("../components/pages/App"),
+const Frontpage = Loadable({
+  loader: () => import("../components/pages/Frontpage"),
   loading: Loading
 });
 
@@ -18,7 +18,7 @@ const NotFound = Loadable({
 export default () => (
   <Router>
     <Switch>
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={Frontpage} />
       <Route component={NotFound} />
     </Switch>
   </Router>
