@@ -29,5 +29,14 @@ export default {
     pickerHeaderColor: purple500,
     clockCircleColor: fade(grey900, 0.07),
     shadowColor: fullBlack
+  },
+  slider: {
+    trackColor: white,
+    selectionColor: purpleA200,
+    trackColorSelected: white,
+    rippleColor: deepPurple100,
+    trackSize: 10,
+    handleSize: 20,
+    handleColorZero: purpleA200
   }
 };
