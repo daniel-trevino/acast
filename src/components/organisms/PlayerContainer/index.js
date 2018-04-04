@@ -1,3 +1,4 @@
+// @flow
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import {
@@ -8,14 +9,14 @@ import {
 } from "../../../actions/podcasts.js";
 import PlayerContainer from "./PlayerContainer";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state: Object): Object => {
   return {
     storeMarker: state.podcasts.currentMarker,
     podcasts: state.podcasts
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch: Function): Function => {
   return {
     fetchPodcasts: () => {
       dispatch(fetchPodcasts()).then(response => {
